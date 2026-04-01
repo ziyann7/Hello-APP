@@ -1,5 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        if (args.length > 0) {
+            String greeting = "Hello ";
+            
+            for (String name : args) {
+                greeting += name + ", ";
+            }
+            
+            greeting = greeting.substring(0, greeting.length() - 2);
+            
+            System.out.println(greeting + "!");
+        } else {
+            System.out.println("Hello World!");
+        }
     }
 }
